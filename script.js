@@ -83,8 +83,6 @@ setInterval(()=>{
 
     medida(segundo1 , second.charAt(0))
     medida(segundo2 , second.charAt(1))
-    console.log(second.charAt(0));
-    console.log(second.charAt(1));
 },1000)
 
 function medida(tempo, time){
