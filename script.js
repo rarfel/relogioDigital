@@ -1,12 +1,11 @@
 const base = document.querySelectorAll(".container")
 
-let container = [...base]
-let hour1 = [...container[0].childNodes]
-let hour2 = [...container[1].childNodes]
-let minute1 = [...container[2].childNodes]
-let minute2 = [...container[3].childNodes]
-let second1 = [...container[4].childNodes]
-let second2 = [...container[5].childNodes]
+let hour1 = [...base[0].childNodes]
+let hour2 = [...base[1].childNodes]
+let minute1 = [...base[2].childNodes]
+let minute2 = [...base[3].childNodes]
+let second1 = [...base[4].childNodes]
+let second2 = [...base[5].childNodes]
 
 let segundo1 = new Map()
 
@@ -83,99 +82,101 @@ setInterval(()=>{
 
     medida(segundo1 , second.charAt(0))
     medida(segundo2 , second.charAt(1))
+    console.log(segundo1);
+
 },1000)
 
 function medida(tempo, time){
     switch(time){
         case '1':
-            tempo.get(1).dataset.pino = 'um'
-            tempo.get(2).dataset.pino = 'um'
-            tempo.get(3).dataset.pino = 'um'
-            tempo.get(4).dataset.pino = 'um'
-            tempo.get(5).dataset.pino = 'um'
-            tempo.get(6).dataset.pino = 'um'
-            tempo.get(7).dataset.pino = 'um'
+            tempo.get(1).dataset.pino = 'none'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'none'
+            tempo.get(6).dataset.pino = 'none'
+            tempo.get(7).dataset.pino = 'none'
             break;
         case '2':
-            tempo.get(1).dataset.pino = 'dois'
-            tempo.get(2).dataset.pino = 'dois'
-            tempo.get(3).dataset.pino = 'dois'
-            tempo.get(4).dataset.pino = 'dois'
-            tempo.get(5).dataset.pino = 'dois'
-            tempo.get(6).dataset.pino = 'dois'
-            tempo.get(7).dataset.pino = 'dois'
+            tempo.get(1).dataset.pino = 'none'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'none'
+            tempo.get(4).dataset.pino = 'on'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '3':
-            tempo.get(1).dataset.pino = 'tres'
-            tempo.get(2).dataset.pino = 'tres'
-            tempo.get(3).dataset.pino = 'tres'
-            tempo.get(4).dataset.pino = 'tres'
-            tempo.get(5).dataset.pino = 'tres'
-            tempo.get(6).dataset.pino = 'tres'
-            tempo.get(7).dataset.pino = 'tres'
+            tempo.get(1).dataset.pino = 'none'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '4':
-            tempo.get(1).dataset.pino = 'quatro'
-            tempo.get(2).dataset.pino = 'quatro'
-            tempo.get(3).dataset.pino = 'quatro'
-            tempo.get(4).dataset.pino = 'quatro'
-            tempo.get(5).dataset.pino = 'quatro'
-            tempo.get(6).dataset.pino = 'quatro'
-            tempo.get(7).dataset.pino = 'quatro'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'none'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'none'
             break;
         case '5':
-            tempo.get(1).dataset.pino = 'cinco'
-            tempo.get(2).dataset.pino = 'cinco'
-            tempo.get(3).dataset.pino = 'cinco'
-            tempo.get(4).dataset.pino = 'cinco'
-            tempo.get(5).dataset.pino = 'cinco'
-            tempo.get(6).dataset.pino = 'cinco'
-            tempo.get(7).dataset.pino = 'cinco'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'none'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '6':
-            tempo.get(1).dataset.pino = 'seis'
-            tempo.get(2).dataset.pino = 'seis'
-            tempo.get(3).dataset.pino = 'seis'
-            tempo.get(4).dataset.pino = 'seis'
-            tempo.get(5).dataset.pino = 'seis'
-            tempo.get(6).dataset.pino = 'seis'
-            tempo.get(7).dataset.pino = 'seis'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'none'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'on'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '7':
-            tempo.get(1).dataset.pino = 'sete'
-            tempo.get(2).dataset.pino = 'sete'
-            tempo.get(3).dataset.pino = 'sete'
-            tempo.get(4).dataset.pino = 'sete'
-            tempo.get(5).dataset.pino = 'sete'
-            tempo.get(6).dataset.pino = 'sete'
-            tempo.get(7).dataset.pino = 'sete'
+            tempo.get(1).dataset.pino = 'none'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'none'
+            tempo.get(7).dataset.pino = 'none'
             break;
         case '8':
-            tempo.get(1).dataset.pino = 'oito'
-            tempo.get(2).dataset.pino = 'oito'
-            tempo.get(3).dataset.pino = 'oito'
-            tempo.get(4).dataset.pino = 'oito'
-            tempo.get(5).dataset.pino = 'oito'
-            tempo.get(6).dataset.pino = 'oito'
-            tempo.get(7).dataset.pino = 'oito'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'on'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '9':
-            tempo.get(1).dataset.pino = 'nove'
-            tempo.get(2).dataset.pino = 'nove'
-            tempo.get(3).dataset.pino = 'nove'
-            tempo.get(4).dataset.pino = 'nove'
-            tempo.get(5).dataset.pino = 'nove'
-            tempo.get(6).dataset.pino = 'nove'
-            tempo.get(7).dataset.pino = 'nove'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'none'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'on'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '0':
-            tempo.get(1).dataset.pino = 'zero'
-            tempo.get(2).dataset.pino = 'zero'
-            tempo.get(3).dataset.pino = 'zero'
-            tempo.get(4).dataset.pino = 'zero'
-            tempo.get(5).dataset.pino = 'zero'
-            tempo.get(6).dataset.pino = 'zero'
-            tempo.get(7).dataset.pino = 'zero'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'on'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'none'
+            tempo.get(7).dataset.pino = 'on'
             break;
         case '':
             tempo.get(1).dataset.pino = 'none'
@@ -187,13 +188,13 @@ function medida(tempo, time){
             tempo.get(7).dataset.pino = 'none'
             break;
         default:
-            tempo.get(1).dataset.pino = 'zero'
-            tempo.get(2).dataset.pino = 'zero'
-            tempo.get(3).dataset.pino = 'zero'
-            tempo.get(4).dataset.pino = 'zero'
-            tempo.get(5).dataset.pino = 'zero'
-            tempo.get(6).dataset.pino = 'zero'
-            tempo.get(7).dataset.pino = 'zero'
+            tempo.get(1).dataset.pino = 'on'
+            tempo.get(2).dataset.pino = 'on'
+            tempo.get(3).dataset.pino = 'on'
+            tempo.get(4).dataset.pino = 'on'
+            tempo.get(5).dataset.pino = 'on'
+            tempo.get(6).dataset.pino = 'none'
+            tempo.get(7).dataset.pino = 'on'
             break;
     }
 }
