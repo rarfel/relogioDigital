@@ -15,7 +15,7 @@ p{
 .piece{
     width: 40px;
     height: 10px;
-    background-color: purple;
+    background-image: linear-gradient(90deg,red,blue);
     position: relative;
 }
 
@@ -23,18 +23,34 @@ p{
 .piece::after{
     content: '';
     position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.piece[data-inverso="invertido"]::after,
+.piece[data-inverso="invertido"]::before{
+    content: '';
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+
+.piece[data-preenchido="cheio"]::after,
+.piece[data-preenchido="cheio"]::before{
+    content: '';
+    position: absolute;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
 }
 
 .piece::before{
-    border-right: 20px solid purple;
-    left: -20px;
+    border-right: 15px solid red;
+    left: -15px;
 }
 
 .piece::after{
-	border-left: 20px solid purple;
-    right: -20px;
+	border-left: 15px solid blue;
+    right: -15px;
 }
 
 .vertical{
