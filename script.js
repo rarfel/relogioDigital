@@ -82,7 +82,6 @@ setInterval(()=>{
 
     medida(segundo1 , second.charAt(0))
     medida(segundo2 , second.charAt(1))
-    console.log(segundo1);
 
 },1000)
 
