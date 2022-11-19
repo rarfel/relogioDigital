@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+:root{
+    --colorOne:red;
+    --colorTwo:blue;
+}
+
 body{
     background-color: #000000;
 }
@@ -15,7 +20,7 @@ p{
 .piece{
     width: 40px;
     height: 10px;
-    background-image: linear-gradient(90deg,red,blue);
+    background-image: linear-gradient(90deg,var(--colorOne),var(--colorTwo));
     position: relative;
 }
 
@@ -44,12 +49,12 @@ p{
 }
 
 .piece::before{
-    border-right: 15px solid red;
+    border-right: 15px solid var(--colorOne);
     left: -15px;
 }
 
 .piece::after{
-	border-left: 15px solid blue;
+	border-left: 15px solid var(--colorTwo);
     right: -15px;
 }
 
@@ -58,6 +63,12 @@ p{
 }
 
 body{
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+.relogio{
     display: flex;
     place-content: center;
     flex-wrap: wrap;
@@ -74,8 +85,8 @@ body{
 }
 .container{
     display: grid;
-    height: 230px;
-    max-width: 110px;
+    height: 200px;
+    max-width: 100px;
     place-content: center;
     place-items: center;
     grid-template-columns: repeat(3,1fr);
@@ -118,4 +129,22 @@ body{
 
 .piece[data-pino='on']{
     display: block;
+}
+
+button{
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    outline: 2px solid white;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out ;
+    font-weight: 600;
+    margin: 2rem;
+}
+button:hover{
+    color: black;
+    background-color: white;
 }
